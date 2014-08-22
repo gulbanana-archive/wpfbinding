@@ -13,7 +13,7 @@ namespace wpfbinding
         public double Data
         {
             get { return data; }
-            set { SetProperty(ref data, value); }
+            set { SetProperty(ref data, value); CalculatedResults = CalculationCallback(value); }
         }
 
         private IEnumerable<CalculatedResult> calculatedResults;
@@ -22,5 +22,7 @@ namespace wpfbinding
             get { return calculatedResults; }
             set { SetProperty(ref calculatedResults, value); }
         }
+
+        public Func<double, IEnumerable<CalculatedResult>> CalculationCallback { get; set; }
     }
 }

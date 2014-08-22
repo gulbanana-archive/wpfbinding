@@ -15,7 +15,7 @@ namespace wpfbinding
             w1.DataContext = new Model1 { DoCalculate = new DelegateCommand<Model1>(this.Model1_DoCalculate) };
 
             var w2 = new View2();
-            w2.DataContext = new Model2 { Data = 1.0, CalculatedResults = new[] { new CalculatedResult { Formula = "+1", Result = 2.0 } } };
+            w2.DataContext = new Model2 { CalculationCallback = this.Calculate };
 
             w1.Show();
             w2.Show();
