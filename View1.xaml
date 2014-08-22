@@ -9,11 +9,6 @@
             <TextBox DockPanel.Dock="Left" MinWidth="100" Text="{Binding Data}"/>
             <Button HorizontalAlignment="Right" Content="Calculate"/>
         </DockPanel>
-        <DataGrid ItemsSource="{Binding CalculatedResults}" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Formula" Binding="{Binding Formula}"/>
-                <DataGridTextColumn Header="Result" Binding="{Binding Result}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <DataGrid ItemsSource="{Binding CalculatedResults}"/>
     </StackPanel>
 </Window>
