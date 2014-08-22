@@ -8,10 +8,10 @@
             <Label DockPanel.Dock="Left" FontWeight="Bold" Content="Data:"/>
             <TextBox DockPanel.Dock="Left" MinWidth="100" Text="{Binding Data}"/>
         </DockPanel>
-        <DataGrid>
+        <DataGrid ItemsSource="{Binding CalculatedResults}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Formula"/>
-                <DataGridTextColumn Header="Result"/>
+                <DataGridTextColumn Header="Formula" Binding="{Binding Formula}"/>
+                <DataGridTextColumn Header="Result" Binding="{Binding Result}"/>
             </DataGrid.Columns>
         </DataGrid>
     </StackPanel>

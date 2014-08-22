@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace wpfbinding
 {
-    class Model1
+    class CalculatedResult
     {
-        public double Data { get; set; }
-        public IEnumerable<CalculatedResult> CalculatedResults { get; set; }
+        public string Formula { get; set; }
+        public double Result { get; set; }
     }
 }

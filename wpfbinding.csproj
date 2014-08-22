@@ -57,6 +57,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CalculatedResult.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="View1.xaml.cs">

@@ -9,5 +9,6 @@ namespace wpfbinding
     class Model2
     {
         public double Data { get; set; }
+        public IEnumerable<CalculatedResult> CalculatedResults { get; set; }
     }
 }
