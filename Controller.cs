@@ -19,5 +19,13 @@ namespace wpfbinding
             w1.Show();
             w2.Show();
         }
+
+        private IEnumerable<CalculatedResult> Calculate(double data)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                yield return new CalculatedResult {Formula = "+"+i.ToString(), Result = data+i};
+            }
+        }
     }
 }
