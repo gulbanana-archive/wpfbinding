@@ -1,8 +1,18 @@
 ﻿<Window x:Class="wpfbinding.View2"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Example 2: Direct binding" SizeToContent="WidthAndHeight">
-    <Grid>
-        
-    </Grid>
+        Title="Example 2: Direct binding" 
+        Width="300" SizeToContent="Height">
+    <StackPanel>
+        <DockPanel>
+            <Label DockPanel.Dock="Left" FontWeight="Bold" Content="Data:"/>
+            <TextBox DockPanel.Dock="Left" MinWidth="100"/>
+        </DockPanel>
+        <DataGrid>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Formula"/>
+                <DataGridTextColumn Header="Result"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
 </Window>

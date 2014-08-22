@@ -1,8 +1,19 @@
 ﻿<Window x:Class="wpfbinding.View1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Example 1: Command-driven calculation" SizeToContent="WidthAndHeight">
-    <Grid>
-        
-    </Grid>
+        Title="Example 1: Command-driven calculation" 
+        Width="300" SizeToContent="Height">
+    <StackPanel>
+        <DockPanel>
+            <Label DockPanel.Dock="Left" FontWeight="Bold" Content="Data:"/>
+            <TextBox DockPanel.Dock="Left" MinWidth="100"/>
+            <Button HorizontalAlignment="Right" Content="Calculate"/>
+        </DockPanel>
+        <DataGrid>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Formula"/>
+                <DataGridTextColumn Header="Result"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
 </Window>
