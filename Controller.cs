@@ -10,8 +10,11 @@ namespace wpfbinding
     {
         public Controller()
         {
-            var w = new MainWindow();
-            w.Show();
+            var w1 = new View1();
+            var w2 = new View2();
+
+            w1.Show();
+            w2.Show();
         }
     }
 }
