@@ -8,5 +8,6 @@ namespace wpfbinding
 {
     class Model2
     {
+        public double Data { get; set; }
     }
 }
