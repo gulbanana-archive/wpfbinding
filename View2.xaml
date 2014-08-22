@@ -6,7 +6,7 @@
     <StackPanel>
         <DockPanel>
             <Label DockPanel.Dock="Left" FontWeight="Bold" Content="Data:"/>
-            <TextBox DockPanel.Dock="Left" MinWidth="100" Text="{Binding Data,UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox DockPanel.Dock="Left" MinWidth="100" Text="{Binding Data, StringFormat=G, UpdateSourceTrigger=PropertyChanged}"/>
         </DockPanel>
         <DataGrid ItemsSource="{Binding CalculatedResults}"/>
     </StackPanel>
