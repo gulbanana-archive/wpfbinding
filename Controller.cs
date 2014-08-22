@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.Prism.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace wpfbinding
         public Controller()
         {
             var w1 = new View1();
-            w1.DataContext = new Model1 { Data = 1.0, CalculatedResults = new[] { new CalculatedResult { Formula = "+1", Result = 2.0 } } };
+            w1.DataContext = new Model1 { DoCalculate = new DelegateCommand<Model1>(this.Model1_DoCalculate) };
 
             var w2 = new View2();
             w2.DataContext = new Model2 { Data = 1.0, CalculatedResults = new[] { new CalculatedResult { Formula = "+1", Result = 2.0 } } };
@@ -26,6 +27,11 @@ namespace wpfbinding
             {
                 yield return new CalculatedResult {Formula = "+"+i.ToString(), Result = data+i};
             }
+        }
+
+        private void Model1_DoCalculate(Model1 viewModel)
+        {
+            viewModel.CalculatedResults = Calculate(viewModel.Data);
         }
     }
 }

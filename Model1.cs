@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace wpfbinding
 {
@@ -22,5 +23,7 @@ namespace wpfbinding
             get { return calculatedResults; }
             set { SetProperty(ref calculatedResults, value); } 
         }
+
+        public ICommand DoCalculate { get; set; }
     }
 }

@@ -7,7 +7,7 @@
         <DockPanel>
             <Label DockPanel.Dock="Left" FontWeight="Bold" Content="Data:"/>
             <TextBox DockPanel.Dock="Left" MinWidth="100" Text="{Binding Data}"/>
-            <Button HorizontalAlignment="Right" Content="Calculate"/>
+            <Button HorizontalAlignment="Right" Content="Calculate" Command="{Binding DoCalculate}" CommandParameter="{Binding}"/>
         </DockPanel>
         <DataGrid ItemsSource="{Binding CalculatedResults}"/>
     </StackPanel>
